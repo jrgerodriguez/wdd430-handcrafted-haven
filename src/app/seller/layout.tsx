@@ -26,7 +26,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
           <h1 className="text-3xl font-semibold tracking-wide font-sans text-center">
             Hello, <span className="text-emerald-400">{first_name}</span>.
           </h1>
-      <div className="flex flex-col md:flex-row w-full max-w-6xl mx-auto gap-6">
+      <div className="flex flex-col md:flex-row w-full max-w-6xl mx-auto md:gap-6 gap-0">
         <aside className="w-full md:w-50 py-4">
           <ul className="list-none flex flex-col gap-4 font-sans text-[0.94rem] text-white/50">
             <li className="md:p-2 rounded cursor-pointer w-full text-left">
@@ -41,7 +41,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
           </ul>
         </aside>
 
-        <main className="flex-1 py-5">
+        <main className="flex-1 py-5 md:pt-5 pt-0">
           {children}
         </main>
 
