@@ -8,7 +8,6 @@ export default function ProductCard({ product }: Props) {
   return (
     <div className="w-full h-full flex flex-col rounded-2xl overflow-hidden shadow-2xl transition-transform duration-500 hover:scale-[1.02] bg-white/5 backdrop-blur-[20px] border border-white/10">
       
-
       <div className="relative w-full h-64">
         <Image
           src={product.image_url ?? "/images/placeholder.jpg"}
