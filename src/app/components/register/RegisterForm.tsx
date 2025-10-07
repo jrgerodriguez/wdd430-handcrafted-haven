@@ -4,10 +4,12 @@ import { useState } from "react";
 import Link from "next/link";
 
 interface RegisterFormProps {
-  onSubmit: (data: { email: string; password: string }) => Promise<void>;
+  onSubmit: (data: { first_name: string, last_name: string, email: string; password: string }) => Promise<void>;
 }
 
 export default function RegisterForm({ onSubmit }: RegisterFormProps) {
+  const [first_name, setFirstName] = useState("");
+  const [last_name, setLastName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
@@ -18,7 +20,9 @@ export default function RegisterForm({ onSubmit }: RegisterFormProps) {
     setLoading(true);
 
     try {
-      await onSubmit({ email, password });
+      await onSubmit({ first_name, last_name, email, password });
+      setFirstName("");
+      setLastName("");
       setEmail("");
       setPassword("");
     } catch (err: unknown) {
@@ -38,6 +42,40 @@ export default function RegisterForm({ onSubmit }: RegisterFormProps) {
 
   return(
     <form onSubmit={handleSubmit} className="flex flex-col gap-6 w-full max-w-md mx-auto px-4 sm:px-0 font-sans">
+
+      {/* First Name */}
+      <div className="flex flex-col w-full">
+        <label htmlFor="email" className="mb-2 text-left text-white text-sm font-thin tracking-wide">
+          Email
+        </label>
+        <input
+          type="text"
+          id="first_name"
+          name="first_name"
+          value={first_name}
+          onChange={e => setFirstName(e.target.value)}
+          className="w-full px-4 py-2 rounded-md border border-white/30 bg-white/10 text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-white/20 font-light text-sm"
+          placeholder="John"
+          required
+        />
+      </div>
+
+      {/* Last Name */}
+      <div className="flex flex-col w-full">
+        <label htmlFor="email" className="mb-2 text-left text-white text-sm font-thin tracking-wide">
+          Email
+        </label>
+        <input
+          type="text"
+          id="last_name"
+          name="last_name"
+          value={last_name}
+          onChange={e => setLastName(e.target.value)}
+          className="w-full px-4 py-2 rounded-md border border-white/30 bg-white/10 text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-white/20 font-light text-sm"
+          placeholder="Davidson"
+          required
+        />
+      </div>
 
       {/* Email */}
       <div className="flex flex-col w-full">

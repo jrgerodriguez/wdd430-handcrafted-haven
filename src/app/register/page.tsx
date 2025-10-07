@@ -7,7 +7,7 @@ import toast from "react-hot-toast";
 export default function RegisterUser() {
   const router = useRouter();
 
-  const handleRegister = async (formData: { email: string; password: string }) => {
+  const handleRegister = async (formData: { first_name: string; last_name: string; email: string; password: string }) => {
     try {
       const response = await fetch("/api/users", {
         method: "POST",

@@ -14,11 +14,11 @@ export async function middleware(req: NextRequest) {
   try {
 
     const { payload } = await jwtVerify(token, JWT_SECRET);
-    console.log("✅ Token válido:", payload);
+    console.log("✅ Token:", payload);
 
     return NextResponse.next();
   } catch (err) {
-    console.error("❌ Token inválido:", err);
+    console.error("❌ Invalid Token:", err);
     return NextResponse.redirect(new URL("/login", req.url));
   }
 }
