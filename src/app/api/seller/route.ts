@@ -14,7 +14,7 @@ export async function GET(req: NextRequest) {
 
         const payload = verifyToken(token);
 
-        if (!payload) {
+        if (!payload || typeof payload !== "object" || !("id" in payload)) {
         return NextResponse.json({ error: "Invalid token" }, { status: 401 });
         }
 
