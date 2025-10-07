@@ -21,7 +21,7 @@ export default function RegisterUser() {
       }
 
       toast.success("User created successfully 🎉");
-      router.push("/home");
+      router.push("/seller");
     } catch (error: unknown) {
       if (error instanceof Error) toast.error(error.message);
       else toast.error("Something went wrong");
@@ -29,7 +29,7 @@ export default function RegisterUser() {
   };
 
   return (
-    <div className="h-screen flex justify-center items-center bg-black px-4 sm:px-6 lg:px-16">
+    <div className="h-screen flex justify-center items-center px-4 sm:px-6 lg:px-16">
       <div className="bg-white/10 backdrop-blur-[15px] p-6 sm:p-8 shadow-[0_8px_32px_rgba(0,0,0,0.25)] w-full max-w-md mx-auto">
         
         <div className="text-center mb-6 font-sans">

@@ -106,7 +106,7 @@ export default function RegisterForm({ onSubmit }: RegisterFormProps) {
 
       <div className="w-full mt-4 text-center">
         <Link
-          href="/"
+          href="/login"
           className="text-white/80 hover:text-white font-light text-sm transition-colors"
         >
           Sign in

@@ -31,7 +31,7 @@ export default function LoginForm() {
       if(!result.ok) throw new Error(data.error || "Login failed")
 
       toast.success(data.message)
-      router.push("/home")
+      router.push("/seller")
 
     } catch (error: unknown) {
       if (error instanceof Error) toast.error(error.message)
