@@ -23,7 +23,7 @@ export async function POST(req: NextRequest) {
         expiresIn: "1h",
         });
 
-        const response = NextResponse.json({ message: "Login successful" });
+        const response = NextResponse.redirect(new URL("/seller", req.url));
         response.cookies.set("token", token, {
         httpOnly: true,
         path: "/",
