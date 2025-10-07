@@ -21,7 +21,7 @@ export default function RegisterUser() {
       }
 
       toast.success("User created successfully 🎉");
-      router.push("/seller");
+      window.location.href = "/seller";
     } catch (error: unknown) {
       if (error instanceof Error) toast.error(error.message);
       else toast.error("Something went wrong");
