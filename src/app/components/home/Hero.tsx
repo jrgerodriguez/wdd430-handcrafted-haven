@@ -6,8 +6,7 @@ import Link from "next/link";
 export default function Hero() {
   return (
     <section
-      className="relative flex items-center justify-center w-full"
-      style={{ height: "calc(100vh - 4rem - 6rem)" }}
+      className="relative flex flex-col items-center justify-center w-full flex-grow"
       aria-labelledby="hero-title"
     >
       <Image
