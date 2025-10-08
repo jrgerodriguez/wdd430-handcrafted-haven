@@ -6,15 +6,6 @@ import Link from "next/link";
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
-  // const handleLogout = async () => {
-  //   try {
-  //     await fetch("/api/auth/logout", { method: "POST" });
-  //     window.location.href = "/";
-  //   } catch (error) {
-  //     console.error("Logout failed:", error);
-  //   }
-  // }
-
   return (
     <>
       <header className="w-full max-w-6xl mx-auto px-6 py-5 flex items-center justify-between">

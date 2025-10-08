@@ -34,7 +34,7 @@ export default function RegisterUser() {
         
         <div className="text-center mb-6 font-sans">
           <h1 className="text-2xl sm:text-2xl md:text-2xl font-semibold text-white">
-            Create a New User
+            Sign up to get started
           </h1>
         </div>
 

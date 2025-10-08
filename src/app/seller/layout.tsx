@@ -3,6 +3,7 @@ import '@/app/globals.css';
 import { verifyToken } from "@/lib/jwt";
 import { cookies } from "next/headers";
 import { JwtPayloadCustom } from "@/types/jwt";
+import LogoutButton from "../components/seller/LogoutButton";
 
 export default async function RootLayout({ children }: { children: React.ReactNode }) {
 
@@ -36,7 +37,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
               <Link href="add">Add New Product</Link>
             </li>
             <li className="md:p-2 rounded cursor-pointer w-full text-left">
-              <Link href="signout">Sign Out</Link>
+              <LogoutButton />
             </li>
           </ul>
         </aside>

@@ -130,7 +130,7 @@ export default function RegisterForm({ onSubmit }: RegisterFormProps) {
       <div className="w-full">
         <button
           type="submit"
-          className="w-full py-2 rounded-md bg-gradient-to-r from-gray-700 to-blue-gray-800 text-white hover:from-gray-600 hover:to-blue-gray-700 transition-all shadow-md cursor-pointer font-semibold text-base "
+          className="w-full py-2 rounded-md bg-gradient-to-r from-amber-600 to-amber-400 text-white hover:from-amber-500 hover:to-amber-300 transition-all shadow-md hover:shadow-lg cursor-pointer "
         >
           {loading ? "Creating..." : "Register"}
         </button>
