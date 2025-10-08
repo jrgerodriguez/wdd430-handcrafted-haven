@@ -16,7 +16,7 @@ export default function MarketplaceClient({products}: {products:Product[]} ) {
       {/* Filters */}
       <div className="my-6 font-sans text-[0.94rem] text-white/50 flex flex-col md:flex-row justify-center items-center gap-6 text-center">
         {/* Dropdown custom */}
-        <div className="relative w-50">
+        <div className="relative w-40">
           <div
             className="px-4 py-2  bg-white/10 text-white cursor-pointer flex justify-between items-center transition hover:bg-white/20"
             onClick={() => setOpen(!open)}
@@ -57,7 +57,7 @@ export default function MarketplaceClient({products}: {products:Product[]} ) {
           <input
             type="text"
             id="max-price"
-            className="px-15 py-2 bg-white/10 text-white placeholder-white focus:outline-none focus:bg-white/20 transition w-24 text-center text-[0.94rem]"
+            className="px-3 py-2 bg-white/10 text-white placeholder-white focus:outline-none focus:bg-white/20 transition w-24 text-center text-[0.94rem]"
             // placeholder="$0"
             value={maxPrice}
             onChange={(e) => setMaxPrice(e.target.value)}
